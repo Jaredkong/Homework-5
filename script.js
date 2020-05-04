@@ -36,9 +36,9 @@ $(document).ready(function() {
 
     // Created an array to represent time in 24hr clock 
     let twentyFourHour = [9,10,11,12,13,14,15,16,17];
-    // Saves current hour
-    let currentHour = moment().format('H');
-
+    // Saves current hour as integer
+    const currentHour = parseInt(moment().format('H'));
+    
     // Checks if current time is in the 9am-5pm range
     if (twentyFourHour.includes(currentHour)) {
         let hourIndex = twentyFourHour.indexOf(currentHour);
